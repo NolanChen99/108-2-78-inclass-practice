@@ -1,0 +1,87 @@
+---
+title: '20200325'
+author: "陳厚銘"
+date: "2020/3/25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+##學生學號
+```{r}
+studentId <- c(410773002, 410773015)
+class(studentId)
+as.character(studentId)
+```
+```{r}
+studentId <- c(410773002, 410773015)
+as.character(studentId)
+class(studentId)
+```
+```{r}
+library(lubridate)
+```
+
+```{r}
+tpeTime <- lubridate::ymd_hms("2020-03-18 13:52:40",
+        tz="Asia/Taipei")
+```
+
+```{r}
+pgTime <- mdy_hms("Mar.18, 2020, 05:52:40",
+                  tz="Europe/Lisbon")
+typeof(pgTime)
+as.double(pgTime)
+```
+
+```{r}
+with_tz(tpeTime, tzone="UTC")
+with_tz(pgTime, tzone="UTC")
+```
+```{r}
+createdAt <- mdy_hms("2020-03-04T06:56:29Z")
+firstCommit <- mdy_hms("2020-03-11 14:16:43",tz="Asia/Taipei")
+lastCommit <- mdy_hms("2020-03-11 14:34:33",tz="Asia/Taipei")
+```
+
+```{r}
+mdy_hms("2020-03-04T06:56:29Z")
+mdy_hms("2020-03-11 14:16:43",tz="Asia/Taipei")
+mdy_hms("2020-03-11 14:34:33",tz="Asia/Taipei")
+```
+
+```{r}
+studentTime<- c(
+  ymd_hms("2020-03-04T06:56:29Z"),
+  ymd_hms c("2020-03-11 14:16:43","2020-03-11 14:34:33",tz="Asia/Taipei")
+)
+```
+```{r}
+studentTime <- c(
+  ymd_hms("2020-03-04T08:16:53Z"),
+  ymd_hms("2020-03-11 16:11:53",tz="Asia/Taipei"),
+  ymd_hms("2020-03-11 16:11:53",tz="Asia/Taipei"))
+studentTime
+```
